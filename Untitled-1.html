@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary App SV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tipografía completamente distinta -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="desing.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Calculadora De Salario</h1>
+        <p>El Salvador · Sistema fiscal 2026</p>
+    </header>
+
+    <main class="app">
+
+        <!-- INPUT -->
+        <section class="card input-card">
+            <h2>Datos del empleado</h2>
+
+            <label>Nombre completo</label>
+            <input type="text" id="employeeName" placeholder="Ingrese su nombre">
+
+            <label>Salario bruto mensual</label>
+            <input type="text" id="salary" placeholder="USD 0.00">
+
+            <div class="buttons">
+                <button id="calculateBtn">Calcular</button>
+                <button id="clearBtn" class="ghost">Limpiar</button>
+            </div>
+        </section>
+
+        <!-- OUTPUT -->
+        <section class="card output-card">
+
+            <div id="emptyState" class="empty">
+                <h3>Listo para calcular</h3>
+                <p>Ingrese el salario y observe el calculo</p>
+            </div>
+
+            <div id="resultsContent" class="hidden">
+
+                <div class="employee-header">
+                    <div class="avatar" id="employeeAvatar">E</div>
+                    <div>
+                        <strong id="employeeDisplayName">Empleado</strong>
+                        <span id="currentPeriod">2025</span>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="box">
+                        <span>Salario bruto</span>
+                        <strong id="displayGrossSalary">$0.00</strong>
+                    </div>
+
+                    <div class="box red">
+                        <span>AFP</span>
+                        <strong id="displayAFP">-$0.00</strong>
+                    </div>
+
+                    <div class="box red">
+                        <span>ISSS</span>
+                        <strong id="displayISSS">-$0.00</strong>
+                    </div>
+
+                    <div class="box yellow">
+                        <span>Base imponible</span>
+                        <strong id="displayTaxableIncome">$0.00</strong>
+                    </div>
+
+                    <div class="box red">
+                        <span>ISR</span>
+                        <strong id="displayISR">-$0.00</strong>
+                    </div>
+                </div>
+
+                <div class="net">
+                    <div>
+                        <span>Neto mensual</span>
+                        <strong id="displayNetMensual">$0.00</strong>
+                    </div>
+                    <div>
+                        <span>Neto quincenal</span>
+                        <strong id="displayNetQuincenal">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
